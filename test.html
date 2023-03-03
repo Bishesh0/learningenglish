@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+       <!-- style  -->
+       <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+      #goto{
+       font-size: 20px;
+       text-decoration: none;
+      }
+      .logo{
+    height: auto;
+    width: 60px;
+   }
+       </style>
+    <title>Learn English Now</title>
+  </head>
+  <body>
+         <!-- nvabar      -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Learn English now</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="verb.html">Verb</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="tense.html">Tense</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="article.html">Article</a>
+                </li>           
+                <li class="nav-item">
+                  <a class="nav-link" href="noun.html">Noun</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sentence.html">Sentence</a>
+               </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="adjective.html">Adjective</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="test.html">Test Yourself</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about us.html">About us </a>
+                  </li>
+                 
+                </ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <img src="logo.png" class="logo">
+                  </ul> 
+              </div>
+            </div>
+          </nav>
+          <h1>Grammar Quiz</h1>
+	<form>
+		<p>1. Choose the correct form of the verb: I ___________ to the store yesterday.</p>
+		<label><input type="radio" name="q1" value="went">went</label><br>
+		<label><input type="radio" name="q1" value="go">go</label><br>
+		<label><input type="radio" name="q1" value="gone">gone</label><br><br>
+
+		<p>2. Choose the correct pronoun: She told _____ that she was going to the store.</p>
+		<label><input type="radio" name="q2" value="I">I</label><br>
+		<label><input type="radio" name="q2" value="me">me</label><br>
+		<label><input type="radio" name="q2" value="myself">myself</label><br><br>
+
+		<p>3. Choose the correct article: _____ apple a day keeps the doctor away.</p>
+		<label><input type="radio" name="q3" value="A">A</label><br>
+		<label><input type="radio" name="q3" value="An">An</label><br>
+		<label><input type="radio" name="q3" value="The">The</label><br><br>
+
+		<button type="submit">Submit Answers</button>
+	</form>
+
+	<script>
+		document.querySelector('form').addEventListener('submit', (event) => {
+			event.preventDefault(); // prevent form from submitting and refreshing the page
+
+			// get user's answers
+			let q1Answer = document.querySelector('input[name="q1"]:checked').value;
+			let q2Answer = document.querySelector('input[name="q2"]:checked').value;
+			let q3Answer = document.querySelector('input[name="q3"]:checked').value;
+
+			// check answers and display result
+			let score = 0;
+			if (q1Answer === 'went') {
+				score += 1;
+				document.getElementById('q1').innerHTML = 'Correct!';
+			} else {
+				document.getElementById('q1').innerHTML = 'Incorrect. The correct answer is "went."';
+			}
+			if (q2Answer === 'me') {
+				score += 1;
+				document.getElementById('q2').innerHTML = 'Correct!';
+			} else {
+				document.getElementById('q2').innerHTML = 'Incorrect. The correct answer is "me."';
+			}
+			if (q3Answer === 'An') {
+				score += 1;
+				document.getElementById('q3').innerHTML = 'Correct!';
+			} else {
+				document.getElementById('q3').innerHTML = 'Incorrect. The correct answer is "An."';
+			}
+
+			// display score
+			document.getElementById('score').innerHTML = `You scored ${score} out of 3.`;
+		});
+	</script>
+
+	<div id="results">
+		<p id="q1"></p>
+		<p id="q2"></p>
+		<p id="q3"></p>
+		<p id="score"></p>
+	</div>
+  <h2> <a href="#top" id="goto">Go to top</a></h2> 
+
+<!-- footer  --> 
+<div class="row">
+  <div class="col-12 footer">
+      <h4>LearnEnglishNow</h4>
+   <p>© All-rights reserved </p>
+   <p>Reyog Paneru, Bisesh Puri, Bimarsha Thakuri</p> <br>
+   <p>Contact information :-9806142027 <br>
+                            9866324241<br> <p>
+   <p>Email Information :- panerureyog@gmail.com <br>
+                           bishesh395@gmail.com<br>
+                           bimarshathakuri77@gmail.com <br> </p>
+   <p>Social Medias :- Reyog Paneru <br> 
+                       Bishesh Puri <br>
+                       Bimarsha Thakuri <br> </p>
+   </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
